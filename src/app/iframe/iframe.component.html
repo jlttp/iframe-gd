@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- Prevent content caching -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <title>Example GoodData PGP SSO Login</title>
+</head>
+<body>
+<form id="helperForm" target="embeddedGoodDataIframe" method="post" action="https://analytics.totvs.com.br/gdc/account/customerlogin">
+    <input id="targetUrl" type="hidden" name="targetUrl" value="" [(ngModel)]="targetUrl"/>
+    <input id="ssoProvider" type="hidden" name="ssoProvider" value="" [(ngModel)]="ssoProvider"/>
+    <input id="encryptedClaims" type="hidden" name="encryptedClaims" value="" [(ngModel)]="encryptedClaims"/>
+    <!--input id="pgpLoginRequest" type="hidden" name="pgpLoginRequest" value="" [(ngModel)]="pgpLoginRequest"/-->
+</form>
+
+<div>
+  <iframe name="embeddedGoodDataIframe"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          width="100%"
+          height="100%"
+          style="position: absolute"
+          scrolling="auto">
+  </iframe>
+</div>
+
+</body>
+</html>
